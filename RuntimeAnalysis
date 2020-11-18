@@ -5,17 +5,26 @@ Solution: O(1)
 
 ---
 Task 1:
-In this task we had a nested for loop, first iterating over two datasets of len(n1) and len(n2), choosing every element and then selecting the first or second index in each item. The indexing process itself is negligible but we run through every subset twice for index 0 and 1 respectively. Therefore we have a time efficiency of 2 * (n1+n2) which sums to O(n).
+In this task we had a nested for loop, first iterating over two datasets of len(n1) and len(n2), 
+choosing every element and then selecting the first or second index in each item. 
+The indexing process itself is negligible but we run through every subset twice for index 0 and 1 respectively. 
+Therefore we have a time efficiency of 2 * (n1+n2) which sums to O(n).
 
 ---
 Task 2:
-The same principle as in Task 1 applies here: We iterate through both lists (O(n1+n2)), access its subitems (O(2*(n1+n2)) and then add items to the dictionary. Again dict lookup is negligible here. Before outputting the results, we sort the key, value pairs (timsort/samplesort) -> using O(n*log(n)), so globally we have a runtime of O(n + n*log(n)). 
+The same principle as in Task 1 applies here: We iterate through both lists (O(n1+n2)), 
+access its subitems (O(2*(n1+n2)) and then add items to the dictionary. Again dict lookup is negligible here. Before outputting the results, 
+we sort the key, value pairs (timsort/samplesort) -> using O(n*log(n)), so globally we have a runtime of O(n + n*log(n)). 
 
 ---
 Task 3:
-In count_calls() we have a for loop, depending on the length of n (O(n)), then sort again using O(n*log(n)). Overall we have O(n+n*log(n)) runtime here. In count_percentage() we access some elements generated before and use another loop, so the function itself again is O(n) (plus the Big(O) from the helper functions before. 
+In count_calls() we have a for loop, depending on the length of n (O(n)), then sort again using O(n*log(n)). 
+Overall we have O(n+n*log(n)) runtime here. In count_percentage() we access some elements generated before and use another loop, 
+so the function itself again is O(n) (plus the Big(O) from the helper functions before. 
 
 ---
 Task 4:
-Here we iterate over 2 lists, calls and texts to create our 4 sets, thus Big(O) is O(2*n). We then again iterate over 1 sublist (O(3*n)) and check wether this element is not in the other sublists. Overall we have a time efficiency of O(x*n), simplified to O(n).
+Here we iterate over 2 lists, calls and texts to create our 4 sets, thus Big(O) is O(2*n). 
+We then again iterate over 1 sublist (O(3*n)) and check wether this element is not in the other sublists. Overall we have a time efficiency of O(x*n), 
+simplified to O(n).
 
