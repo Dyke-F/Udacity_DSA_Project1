@@ -34,7 +34,7 @@ def count_time(data: list) -> dict:
     return number2time
 
 
-def get_max_number() -> dict:
+def get_max_number() -> (int, int):
     number2time = count_time(calls)
     
     #max_key = max(number2time, key = number2time.get)
