@@ -13,8 +13,8 @@ Therefore we have a time efficiency of 2 * (n1+n2) which sums to O(n).
 ---
 Task 2:
 The same principle as in Task 1 applies here: We iterate through both lists (O(n1+n2)), 
-access its subitems (O(2*(n1+n2)) and then add items to the dictionary. Again dict lookup is negligible here. Before outputting the results, 
-we sort the key, value pairs (timsort/samplesort) -> using O(n*log(n)), so globally we have a runtime of O(n + n*log(n)). 
+access its subitems (O(2*(n1+n2)) and then add items to the dictionary. Again dict lookup is negligible here. 
+In total we thus end up with a runtime of O(n).
 
 ---
 Task 3:
@@ -25,6 +25,6 @@ so the function itself again is O(n) (plus the Big(O) from the helper functions 
 ---
 Task 4:
 Here we iterate over 2 lists, calls and texts to create our 4 sets, thus Big(O) is O(2*n). 
-We then again iterate over 1 sublist (O(3*n)) and check wether this element is not in the other sublists. Overall we have a time efficiency of O(x*n), 
-simplified to O(n).
+We then again iterate over 1 sublist (O(3*n)) and check wether this element is not in the other sublists. 
+Finally we return the sorted list (additionally O(log(n)), so overall we have a time efficiency of O(n * log(n)).
 
