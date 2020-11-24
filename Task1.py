@@ -27,7 +27,7 @@ def count_nums(data1: list, data2: list) -> (set, int):
         for idx in range(2):
             count_num.update([row[idx] for row in item])
 
-return count_num, len(count_num)
+    return count_num, len(count_num)
 
 
 count_num, count_length = count_nums(texts, calls)
