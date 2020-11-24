@@ -76,7 +76,7 @@ def count_calls(data: list):
 
 
 
-return len(bangalore_out_calls_set), sorted(bangalore_out_calls_set), bangalore_out_calls_list
+    return len(bangalore_out_calls_set), sorted(bangalore_out_calls_set), bangalore_out_calls_list
 
 
 
@@ -98,7 +98,7 @@ def count_percentage(calls):
         if call_code == "(080)":
             bangalore2bangalore += 1
     
-    return round((bangalore2bangalore / total_num_calls * 100), 3)
+    return round((bangalore2bangalore / total_num_calls * 100), 2)
 
 
 
